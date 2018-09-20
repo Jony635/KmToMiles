@@ -1,5 +1,6 @@
 package com.example.jonathanmc.kmtomiles;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,5 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
         EditText kmText = findViewById(R.id.KilometresInput);
         kmText.setText(Float.toString(kmAmount));
+    }
+
+    public void NewActivity(View view)
+    {
+        Intent intent = new Intent(this, AnotherActivity.class);
+        startActivity(intent);
     }
 }
